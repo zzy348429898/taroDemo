@@ -7,7 +7,6 @@ import WxCanvas from "./wx-canvas";
 import style from "./index.module.less";
 import uuid from "@/utils/uuid";
 import classNames from "classnames";
-import { isAlipay, isWeApp } from "@/utils/env";
 interface Props {
   id: string;
   canvasId: string;
@@ -23,14 +22,12 @@ class EcCanvas extends React.Component<Props, State> {
   ctx: any;
   chart: any;
   canvasNode: any;
-  canvasRef: React.RefObject<unknown>;
   constructor(props) {
     super(props);
     this.state = {
       isUseNewCanvas: true,
       className: `ec4${uuid()}`,
     };
-    this.canvasRef = React.createRef();
   }
   // methods
   init = (callback) => {
@@ -42,9 +39,10 @@ class EcCanvas extends React.Component<Props, State> {
       console.warn("开发者强制使用旧canvas,建议关闭");
     }
     if (isUseNewCanvas) {
-      this.initByNewWay(callback)
+      this.initByNewWay(callback);
     } else {
-      const isValid = compareVersion(Taro.getSystemInfoSync().SDKVersion, "1.9.91") >= 0;
+      const isValid =
+        compareVersion(Taro.getSystemInfoSync().SDKVersion, "1.9.91") >= 0;
       if (!isValid) {
         console.error(
           "微信基础库版本过低，需大于等于 1.9.91。参见：https://github.com/ecomfe/echarts-for-weixin#%E5%BE%AE%E4%BF%A1%E7%89%88%E6%9C%AC%E8%A6%81%E6%B1%82"
@@ -78,15 +76,15 @@ class EcCanvas extends React.Component<Props, State> {
         ) {
           this.chart = this.props.ec?.onInit(
             canvas,
-            res.width,
-            res.height,
+            res[0].width,
+            res[0].height,
             canvasDpr
           );
         } else {
           this.props.init({
             canvas: canvas,
-            width: res.width,
-            height: res.height,
+            width: res[0].width,
+            height: res[0].height,
             canvasDpr: canvasDpr,
           });
         }
@@ -101,17 +99,18 @@ class EcCanvas extends React.Component<Props, State> {
       const canvasWidth = res[0].width;
       const canvasHeight = res[0].height;
       const ctx = canvasNode.getContext("2d");
-      debugger
       const canvas = new WxCanvas(ctx, this.props.canvasId, true, canvasNode);
-      echarts.setCanvasCreator(() => {
-        return canvas;
+      // echarts.setCanvasCreator(() => {
+      //   return canvas;
+      // });
+      echarts.setPlatformAPI({
+        createCanvas: () => {
+          return canvas;
+        },
       });
       if (typeof callback === "function") {
         this.chart = callback(canvas, canvasWidth, canvasHeight, canvasDpr);
-      } else if (
-        this.props.ec &&
-        typeof this.props.ec?.onInit === "function"
-      ) {
+      } else if (this.props.ec && typeof this.props.ec?.onInit === "function") {
         this.chart = this.props.ec?.onInit(
           canvas,
           canvasWidth,
@@ -126,52 +125,13 @@ class EcCanvas extends React.Component<Props, State> {
           canvasDpr: canvasDpr,
         });
       }
-    }
-    const queryCbAliPay = (res) => {
-      debugger;
-      const canvasNode = res[0].node;
-      this.canvasNode = canvasNode;
-      const canvasDpr = Taro.getSystemInfoSync().pixelRatio;
-      const canvasWidth = res[0].width;
-      const canvasHeight = res[0].height;
-      const ctx =  Taro.createCanvasContext(this.props.canvasId);
-      const canvas = new WxCanvas(ctx, this.props.canvasId, true, canvasNode);
-      echarts.setCanvasCreator(() => {
-        return canvas;
-      });
-      if (typeof callback === "function") {
-        this.chart = callback(canvas, canvasWidth, canvasHeight, canvasDpr);
-      } else if (
-        this.props.ec &&
-        typeof this.props.ec?.onInit === "function"
-      ) {
-        this.chart = this.props.ec?.onInit(
-          canvas,
-          canvasWidth,
-          canvasHeight,
-          canvasDpr
-        );
-      } else {
-        this.props.init({
-          canvas: canvas,
-          width: res.width,
-          height: res.height,
-          canvasDpr: canvasDpr,
-        });
-      }
-    }
-    const query = Taro.createSelectorQuery();
-    if(isAlipay()){
-      query
-      .select(`.${this.state.className}`)
-      .boundingClientRect(queryCbAliPay);
-    } else{
-      query
-      .select(`.${this.state.className}`)
-      .fields({ node: true, size: true })
-      .exec(queryCbWx);
-    }
+    };
 
+    const query = Taro.createSelectorQuery();
+    query
+    .select(`.${this.state.className}`)
+    .fields({ node: true, size: true })
+    .exec(queryCbWx);
   };
   canvasToTempFilePath = (opt) => {
     if (this.state.isUseNewCanvas) {
@@ -277,7 +237,6 @@ class EcCanvas extends React.Component<Props, State> {
       // 新的：接口对其了H5
       return (
         <Canvas
-          ref={this.canvasRef}
           id={this.props.canvasId}
           canvasId={this.props.canvasId}
           type="2d"
@@ -293,7 +252,6 @@ class EcCanvas extends React.Component<Props, State> {
       // 旧的
       return (
         <Canvas
-          ref={this.canvasRef}
           id={this.props.canvasId}
           canvasId={this.props.canvasId}
           className={classNames(style["ec-canvas"], this.state.className)}

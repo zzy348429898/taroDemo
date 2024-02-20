@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import * as echarts from '../ec-canvas/echarts'
+import echarts  from './components/ecCanvas/echarts'
 import { isH5 } from '@/utils/env'
 import isEqual from 'lodash/isEqual'
 import { View } from '@tarojs/components'
 import invoke from 'lodash/invoke'
-
+import EcCanvas from './components/ecCanvas'
 export type Chart = Record<string, any>
 export type Option = Record<string, any>
 
@@ -16,7 +16,6 @@ export interface ChartProps {
 
 // 默认配置
 export const ECHARTS_CONFIG = {
-  RATIO: 2, // 分辨率
   REFRESH_DELAY: 800 // 刷新延迟。小程序需要久一点
 }
 
@@ -28,7 +27,6 @@ export const ECHARTS_CONFIG = {
 function createWebChart(chartOption: Option, domId: string): Chart {
   let chart = {}
   const $area = document.getElementById(domId)
-
   if ($area) {
     chart = echarts.init($area)
     chart.setOption(chartOption)
@@ -44,8 +42,8 @@ function createWebChart(chartOption: Option, domId: string): Chart {
 function createWeAppChartInitialtor(option: Option, callback: (chart: Chart) => void) {
   return function initChart(canvas, width, height, dpr) {
     const chart = echarts.init(canvas, null, {
-      width,
-      height,
+      width: width / (dpr || 1),
+      height: height / (dpr || 1),
       devicePixelRatio: dpr // 像素
     })
     canvas.setChart(chart)
@@ -67,7 +65,9 @@ export default abstract class TaroChart<T> extends Component<T> {
     super(props)
     const option = this.getChartOption()
     const callback = chart => {
+      console.log('init callback', chart)
       this.chart = chart
+      this.refresh()
     }
     const initChartAfterMount = () => {
       if (isH5()) {
@@ -109,12 +109,11 @@ export default abstract class TaroChart<T> extends Component<T> {
   render() {
     const { height, width } = this.props
     const domId = this.getDomId()
-
     return isH5() ? (
       <View id={domId} style={{ height, width }} />
     ) : (
       <View style={{ height, width }}>
-        <ec-canvas id={ domId } canvas-id={domId} ec={this.ec} type="2d" />
+        <EcCanvas id={ domId } canvasId={domId} ec={this.ec} type="2d" />
       </View>
     )
   }
