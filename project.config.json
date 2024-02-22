@@ -5,16 +5,18 @@
   "appid": "wxc4684457a193be80",
   "setting": {
     "urlCheck": true,
-    "es6": false,
-    "enhance": false,
+    "es6": true,
+    "enhance": true,
     "compileHotReLoad": false,
     "postcss": false,
-    "minified": false,
+    "minified": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "condition": true,
+    "compileWorklet": false
   },
   "compileType": "miniprogram",
   "libVersion": "3.3.3",

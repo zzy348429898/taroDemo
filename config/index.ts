@@ -106,7 +106,7 @@ const config = {
   }
 }
 
-module.exports = function (merge) {
+export default function (merge) {
   if (process.env.APP_ENV === 'development') {
     return merge({}, config, require('./dev'))
   }

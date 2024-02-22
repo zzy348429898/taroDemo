@@ -97,6 +97,7 @@ export default abstract class TaroChart<T> extends Component<T> {
       const option = this.getChartOption()
       invoke(this.chart, 'clear')
       this.chart.setOption(option)
+      console.log('refresh')
       setTimeout(() => this.refreshCallback && this.refreshCallback(), 0)
     }
   }

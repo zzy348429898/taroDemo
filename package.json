@@ -39,8 +39,9 @@
   ],
   "author": "",
   "dependencies": {
-    "@antv/f2": "^5.2.2",
     "@babel/runtime": "^7.21.5",
+    "@nutui/nutui-react-taro": "^2.3.10",
+    "@reduxjs/toolkit": "^1.9.5",
     "@tarojs/components": "3.6.23",
     "@tarojs/helper": "3.6.23",
     "@tarojs/plugin-framework-react": "3.6.23",
@@ -58,10 +59,10 @@
     "@tarojs/runtime": "3.6.23",
     "@tarojs/shared": "3.6.23",
     "@tarojs/taro": "3.6.23",
-    "@visactor/taro-vchart": "^1.9.3",
     "classnames": "^2.5.1",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-redux": "^8.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
