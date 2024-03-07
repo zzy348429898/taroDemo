@@ -8,15 +8,15 @@ export default function Index() {
   };
   return (
     <View className={style.index}>
-      <Cell onClick={() => toPage("/pages/taroUI/index")} title={'taroUI'}></Cell>
+      {/* <Cell onClick={() => toPage("/pages/taroUI/index")} title={'taroUI'}></Cell> */}
       {/* <Cell onClick={() => toPage("/pages/taro3Table/index")} title={'多功能表格组件'}></Cell> */}
       {/* <Cell onClick={() => toPage("/pages/nutUI/index")} title={'nutUI'}></Cell> */}
-      <Cell onClick={() => toPage("/pages/pageParams/index")} title={'页面传参与回调'}></Cell>
+      {/* <Cell onClick={() => toPage("/pages/pageParams/index")} title={'页面传参与回调'}></Cell> */}
       <Cell onClick={() => toPage("/pages/qrCode/index")} title={'二维码'}></Cell>
       <Cell onClick={() => toPage("/pages/charts/index")} title={'图表'}></Cell>
       <Cell onClick={() => toPage("/pages/soundInput/index")} title={'语音输入'}></Cell>
       <Cell onClick={() => toPage("/pages/components/index")} title={'组件'}></Cell>
-
+      <Cell onClick={() => toPage("/pages/apis/pages/index/index")} title={'接口'}></Cell>
     </View>
   );
 }

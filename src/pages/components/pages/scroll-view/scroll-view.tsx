@@ -1,7 +1,7 @@
 import React from "react";
 import Taro from '@tarojs/taro';
 import { View, ScrollView } from "@tarojs/components";
-import Header from "@/components/head/head";
+import Header from "@/pages/components/head/head";
 import "./scroll-view.scss";
 
 export default class PageView extends React.Component {

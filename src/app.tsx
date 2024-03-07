@@ -6,7 +6,10 @@ import '@/styles/custom-theme.scss'
 import '@/assets/iconcool/iconcool.css'
 import '@/styles/common.scss'
 // 全局样式
-import './app.less'
+import './app.scss'
+import './styles/demoStyles/common.scss';
+import './styles/demoStyles/mixins.scss';
+import './styles/demoStyles/variables.scss';
 import useCheckWeappNewVersion from './hooks/useCheckWeappNewVersion'
 import { initShowToast } from './components/ui/ShowToast'
 import { Provider } from 'react-redux'

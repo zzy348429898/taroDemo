@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Picker } from "@tarojs/components";
 
-import Header from "@/components/head/head";
+import Header from "@/pages/components/head/head";
 import "./picker.scss";
 
 export default class PagePicker extends React.Component {

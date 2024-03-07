@@ -3,7 +3,7 @@ import { View, MovableView, MovableArea, Switch, Button } from "@tarojs/componen
 
 import { MovableViewProps } from "@tarojs/components/types/MovableView";
 
-import Header from "@/components/head/head";
+import Header from "@/pages/components/head/head";
 
 import "./movable-view.scss";
 

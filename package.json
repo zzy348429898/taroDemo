@@ -6,7 +6,7 @@
   "templateInfo": {
     "name": "default",
     "typescript": true,
-    "css": "Less",
+    "css": "Sass",
     "framework": "React"
   },
   "scripts": {

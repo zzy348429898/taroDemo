@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { View, BaseEventOrig, Checkbox, Label, CheckboxGroup } from '@tarojs/components'
-import Header from '@/components/head/head'
+import Header from '@/pages/components/head/head'
 import './checkbox.scss'
 
 interface itemProps {

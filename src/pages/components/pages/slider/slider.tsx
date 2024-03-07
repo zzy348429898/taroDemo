@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { View, Button, Slider } from '@tarojs/components'
 
-import Header from '@/components/head/head'
+import Header from '@/pages/components/head/head'
 
 const PageSlider = () => {
   const [value, setValue] = useState(0);

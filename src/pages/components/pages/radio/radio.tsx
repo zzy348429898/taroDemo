@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { View, Radio, Label, RadioGroup } from "@tarojs/components";
-import Header from "@/components/head/head";
+import Header from "@/pages/components/head/head";
 import "./radio.scss";
 
 interface RadioItem {

@@ -1,6 +1,6 @@
 import Taro from '@tarojs/taro'
 import { useState } from 'react'
-import { randomColor } from '@/utils/index'
+import { randomColor } from '@/pages/utils/index'
 import { View, Button, Text } from '@tarojs/components'
 import './tabBarApis.scss'
 

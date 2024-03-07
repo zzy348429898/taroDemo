@@ -1,8 +1,8 @@
 import React from "react";
 import Taro from "@tarojs/taro";
 import { Camera, Button, View, Image, Video, Switch } from "@tarojs/components";
-import { throttle, hadlePermissionsDeny } from '@/utils/index'
-import Header from "@/components/head/head";
+import { throttle, hadlePermissionsDeny } from '@/pages/utils/index'
+import Header from "@/pages/components/head/head";
 import { CameraProps } from "@tarojs/components/types/Camera";
 
 import "./camera.scss";

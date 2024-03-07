@@ -16,8 +16,8 @@ import {
   Switch,
   ScrollView
 } from "@tarojs/components";
-import Header from "@/components/head/head";
-import JSONTree from '@/components/jsontree'
+import Header from "@/pages/components/head/head";
+import JSONTree from '@/pages/components/jsontree'
 import "./form.scss";
 
 type RadioItemType = {

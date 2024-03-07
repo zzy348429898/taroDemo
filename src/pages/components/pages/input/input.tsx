@@ -1,7 +1,7 @@
 import { View, Input, ScrollView } from "@tarojs/components";
 import { useState } from "react";
 
-import Header from "@/components/head/head";
+import Header from "@/pages/components/head/head";
 
 import "./input.scss";
 

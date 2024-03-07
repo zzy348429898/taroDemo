@@ -1,6 +1,6 @@
 import { View, Navigator } from '@tarojs/components'
 
-import Header from '@/components/head/head'
+import Header from '@/pages/components/head/head'
 
 import './navigator.scss'
 

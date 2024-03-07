@@ -1,8 +1,7 @@
 import Taro from "@tarojs/taro";
 import { Component } from "react";
 import { View, Image, Text, ScrollView } from "@tarojs/components";
-
-
+import "./index.scss";
 export default class Index extends Component<never, any> {
   constructor(props: never) {
     super(props);

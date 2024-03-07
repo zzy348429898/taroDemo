@@ -1,5 +1,5 @@
 import { View, Text, ScrollView } from "@tarojs/components";
-import Header from "@/components/head/head";
+import Header from "@/pages/components/head/head";
 import "./view.scss";
 
 export default () => {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { View, Text, Switch } from "@tarojs/components";
-import Header from "@/components/head/head";
+import Header from "@/pages/components/head/head";
 import "./switch.scss";
 
 const PageSwitch = () => {

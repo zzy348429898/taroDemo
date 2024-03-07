@@ -1,7 +1,7 @@
 import React from "react";
 import Taro from "@tarojs/taro";
 import { View, Video, Button } from "@tarojs/components";
-import Header from "@/components/head/head";
+import Header from "@/pages/components/head/head";
 import "./video.scss";
 
 export default class PageView extends React.Component {

@@ -3,7 +3,7 @@ import githubPng from "@/assets/iconpark/github.png"
 import rnPng from "@/assets/common/rn.png"
 import h5Png from "@/assets/common/h5.png"
 import weappPng from "@/assets/common/wapp.png"
-import { isRN, loadWeb } from "@/utils/index";
+import { isRN, loadWeb } from "@/pages/utils/index";
 import './insignia.scss'
 
 interface InsigniaProps {
