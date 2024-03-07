@@ -1,0 +1,46 @@
+.nut-radiogroup--horizontal .nut-radio {
+  margin: 0 18px 18px 0;
+}
+
+.nut-radio__button {
+  // background-image: linear-gradient(105deg, rgba(194, 200, 255, .2) 0%, rgba(233, 227, 255, .2) 100%);
+  background: rgb(244, 245, 255);
+  border-radius: 22px;
+  color: #08083C;
+  font-size: 24px;
+  letter-spacing: 0;
+  text-align: center;
+  height: 56px;
+  line-height: 56px;
+  min-width: 158px;
+  border: 2px solid transparent;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-auto-width {
+  .nut-radio__button {
+    min-width: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.nut-radio__button--active {
+  background-image: linear-gradient(100deg, rgba(194, 200, 255, 0.32) 0%, rgba(255, 255, 255, 0.32) 100%);
+  border: 2px solid rgba(57, 82, 226, 1);
+  border-radius: 22px;
+  color: #4B59FF;
+
+}
+
+.nut-radio__button--disabled {
+  color: gray;
+  border: 2px solid transparent;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

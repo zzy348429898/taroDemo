@@ -1,0 +1,34 @@
+.nut-tabs__titles-item__line {
+  display: none;
+}
+
+.nut-tabpane {
+  padding: 0;
+}
+
+.nut-tabs__titles {
+  border-right: 1px solid rgba(242, 242, 243, 0.8);
+  background: rgb(250, 250, 250);
+}
+
+.nut-tabs__titles-item {
+  background: #FAFAFA;
+  font-size: 28px;
+  color: #666666;
+  letter-spacing: 0;
+  line-height: 40px;
+  justify-content: flex-start;
+  padding-left: 32px;
+
+  // font-weight: 400;
+}
+
+.nut-tabs__titles-item--active {
+  background: #FFFFFF;
+  font-size: 28px;
+  color: #212121;
+  letter-spacing: 0;
+  line-height: 40px;
+  border-right: 1px solid #fff;
+  // font-weight: 400;
+}

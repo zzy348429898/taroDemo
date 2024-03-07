@@ -1,0 +1,31 @@
+:global {
+  .nut-inputnumber {
+    .nut-input-minus {
+      width: 36px;
+      height: 36px;
+      background-color: #fff !important;
+      border: 0.67px solid rgba(8, 8, 63, 0.2) !important;
+
+      .nut-icon-minus {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    .nut-number-input {
+      background-color: #fff;
+    }
+
+    .nut-input-add {
+      width: 36px;
+      height: 36px;
+      background: #0A00FF;
+
+      .nut-icon-plus {
+        width: 36px;
+        height: 36px;
+        color: #fff;
+      }
+    }
+  }
+}

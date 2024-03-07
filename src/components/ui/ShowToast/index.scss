@@ -1,0 +1,21 @@
+.show-toast-wrapper {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999999;
+
+  .toast-inner {
+    background: rgba(0, 0, 0, 0.6);
+    // background: rgba(89, 89, 89, 1);
+    max-width: 60%;
+    font-size: 28px;
+    border-radius: 24px;
+    padding: 24px;
+    color: #fff;
+  }
+}

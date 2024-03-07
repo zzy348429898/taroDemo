@@ -1,0 +1,9 @@
+@import "../../../../styles/variables.scss";
+
+.rich-text {
+  width: 400px;
+  height: 400px;
+  background-color: $color-brand;
+  margin: 0 auto;
+  display: flex;
+}

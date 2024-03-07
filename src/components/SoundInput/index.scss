@@ -1,0 +1,129 @@
+@import '@/styles/var.scss';
+
+.sound-input-component {
+  // width: 100%;
+  // background: rgb(245, 243, 251);
+  // background-image: linear-gradient(98deg, rgba(130, 166, 255, 0.2) 0%, rgba(187, 155, 255, 0.2) 100%);
+  // border-radius: 28px;
+  // height: 76px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  .nut-textarea {
+    background: transparent;
+    padding: 0;
+    text-align: justify;
+    text-align-last: left;
+    padding-top: 8px;
+    font-size: 32px;
+    color: #08083F;
+    letter-spacing: 0;
+    font-weight: 500;
+    width: 500px;
+  }
+
+  .nut-textarea__textarea {
+    color: #08083F;
+    font-size: 32px;
+    color: #08083F;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+
+  .voice-input-icon {
+    display: inline-block;
+    background-size: contain;
+    width: 38px;
+    height: 38px;
+    margin-right: 8px;
+    vertical-align: -10px;
+    background-repeat: no-repeat;
+    background-image: url('https://images.youshang.com/saas/v3/xdkj/images/voice1.png');
+  }
+
+  .voice-input-txt {
+    display: inline-block;
+    font-size: 32px;
+    color: #08083F;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+
+
+
+
+
+  .nut-popup-bottom {
+    overflow: visible;
+  }
+}
+
+.voice-rec-popup {
+  background: transparent;
+
+  .voice-rec-popup-cancel {
+    background: rgba(22, 14, 48, 0.36);
+    border-radius: 30px;
+    display: flex;
+    height: 60px;
+    width: 176px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.68);
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 16px;
+
+    &:active {
+      background: rgba(22, 14, 48, 0.68);
+    }
+
+    .guanbi {
+      color: #fff;
+      margin-right: 8px;
+    }
+  }
+
+  .voice-rec-popup-content {
+    position: relative;
+    background-image: url('https://images.youshang.com/saas/v3/xdkj/images/home/voice_bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 344px;
+
+    .content-text-h2 {
+      text-align: center;
+      font-size: 28px;
+      color: #08083F;
+      font-weight: 600;
+      padding-top: 70px;
+      padding-bottom: 24px;
+      line-height: 1;
+    }
+
+    .content-text-h3 {
+      font-size: 24px;
+      color: rgba(8, 8, 63, 0.50);
+      letter-spacing: 0;
+      text-align: center;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .content-float-text {
+      position: absolute;
+      bottom: 16px;
+      right: 32px;
+      font-size: 24px;
+      color: rgba(8, 8, 63, 0.7);
+    }
+  }
+
+}
+
+.voice-rec-popup-overlay {
+  background-color: transparent !important;
+}

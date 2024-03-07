@@ -1,9 +1,33 @@
 {
   "miniprogramRoot": "dist/tt/",
-  "projectname": "taroDemo",
-  "appid": "testAppId",
+  "projectname": "小蝶会计",
+  "description": "taro Demo",
+  "appid": "ttb53cc3812a0d4dd401",
   "setting": {
-    "es6": false,
-    "minified": false
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "compileHotReLoad": false,
+    "postcss": false,
+    "minified": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "condition": true,
+    "compileWorklet": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.3.3",
+  "srcMiniprogramRoot": "dist/tt/",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
   }
 }

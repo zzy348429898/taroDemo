@@ -1,0 +1,23 @@
+.nut-collapse-item__title {
+  font-size: 28px;
+  color: #08083C;
+  letter-spacing: 0;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+.nut-collapse-item__icon-box {
+  padding-right: 34px;
+}
+
+.nut-collapse-item__header {
+  padding: 16px 32px;
+
+  &::after {
+    border-bottom: none;
+  }
+}
+
+.nut-collapse-item__content-text {
+  padding: 16px 32px;
+}

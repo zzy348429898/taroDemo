@@ -1,38 +1,17 @@
 import { configureStore, ThunkAction, combineReducers, Action, Reducer } from '@reduxjs/toolkit'
 import { getReducerManager } from './reducerManager'
-import * as configObj from '@/config'
+// import * as configObj from '@/config'
 // 模块
-import appSlice from './modules/appSlice'
-import accountSlice from './modules/accountSlice'
-import feeSlice from './modules/feeSlice'
-import uploadSlice from './modules/uploadSlice'
-import aiMessageSlice from './modules/aiMessageSlice'
-import todoSlice from './modules/todoSlice'
-import originBillListSlice from './modules/originBillListSlice'
-import companySlice from './modules/companySlice'
-import storeSkillOrderRecord from './modules/skillOrderRecord'
-import sfaSlice from './modules/sfaSlice'
-import linkManPage from './pages/linkManPage'
-import homeTodoSlice from './modules/homeTodoSlice'
-import bluetoothSlice from '@/shared/src/store/bluetoothSlice'
+// import appSlice from './modules/appSlice'
+
 
 const reducerManager = getReducerManager({
-  app: appSlice,
-  account: accountSlice,
-  fee: feeSlice,
-  uploadFile: uploadSlice,
-  aiMessage: aiMessageSlice,
-  homeTodo: homeTodoSlice,
-  bluetooth: bluetoothSlice,
-  company: companySlice,
-  originBillList: originBillListSlice,
-  sfa: sfaSlice,
-  linkManPage: linkManPage,
-  storeSkillOrderRecord
+  // app: appSlice,
 })
 const store = configureStore({
   reducer: reducerManager.reduce,
-  devTools: configObj.debuggerMode,
+  // devTools: configObj.debuggerMode,
+  devTools: true,
   middleware: getDefaultMiddleware => {
     return getDefaultMiddleware({
       serializableCheck: false

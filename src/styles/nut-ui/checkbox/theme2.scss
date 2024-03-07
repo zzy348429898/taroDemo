@@ -1,0 +1,30 @@
+.nut-checkbox {
+  height: 104px;
+  line-height: 104px;
+  border-top: 1px solid rgba(241, 241, 242, 0.8);
+
+  .nut-checkbox__label {
+    font-size: 28px;
+    color: #08083C;
+    letter-spacing: 0;
+    line-height: 36px;
+    font-weight: 500;
+  }
+
+}
+
+.nut-checkbox--reverse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nut-checkbox__icon {
+  font-size: 36px;
+  color: rgb(96, 118, 227);
+}
+
+.nut-checkbox__icon--indeterminate {
+  font-size: 36px;
+  color: rgb(96, 118, 227);
+}

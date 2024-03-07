@@ -1,0 +1,29 @@
+// 主题色
+$primary-color: #3C4EFF;
+$primary-color-end: #f0f4ff;
+/*=================================================================
+  颜色
+  =================================================================*/
+$primary : #3C4EFF;
+$primary-hover : #1084ff;
+$border-color : #dfdfdf;
+$white : #fff;
+$success : #3DBD37;
+$gray : #7F8593;
+$error : #ea5361;
+$page-bg-color : #F0F2F5;
+$hover-background : #F5F5F5;
+$base-text-color : #08083F;
+$danger : #FB2323;
+
+/*=================================================================
+  动画
+  =================================================================*/
+$transition-time : 0.28s; // 动画时间
+
+/*=================================================================
+  function
+  =================================================================*/
+@function useStaticResource($url) {
+  @return 'https://images.youshang.com/saas/v3/xdkj'+$url
+}
